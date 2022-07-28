@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website</title>
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header class="header">
+		<h1 class="header-h1">Ejercicios Prácticos</h1>
+	</header>
+	<div class="btn-panel">
+		<div>
+			<button class="action-button dark-button">
+				<i class="open_button-icon fa-solid fa-moon"></i>
+			</button>
+		</div>
+		<div>
+			<button class="action-button up-button">
+				<i class="open_button-icon fa-solid fa-arrow-up"></i>
+			</button>
+			<button class="action-button open-button">
+				<i class="open_button-icon fa-solid fa-bars"></i>
+			</button>
+		</div>
+	</div>
+	<aside class="panel">
+		<nav class="menu">
+			<a class="menu-a" href="#section-1">Reloj Digital y Alarma</a>
+			<a class="menu-a" href="#section-2">Eventos del Teclado</a>
+			<a class="menu-a" href="#section-3">Cuenta Atrás</a>
+			<a class="menu-a" href="#section-4">Responsive Design con Javascript4</a>
+			<a class="menu-a" href="#section-5">Responsive Tester</a>
+			<a class="menu-a" href="#section-6">Detección de Dispositivos (User Agent)</a>
+			<a class="menu-a" href="#section-7">Sección 7</a>
+			<a class="menu-a" href="#section-8">Sección 8</a>
+			<a class="menu-a" href="#section-9">Sección 9</a>
+			<a class="menu-a" href="#section-10">Sección 10</a>
+		</nav>
+	</aside>
+	<main>
+		<section id="section-1" class="section" data-dark>
+			<h2 class="section-h2">Sección 1</h2>
+			<h3 class="section-h3">Reloj Digital y Alarma sonora</h3>
+			<div class="clockInfo"></div>
+			<div class="btn-section">
+				<button class="section-1_btn startClock">Iniciar Reloj</button>
+				<button class="section-1_btn stopClock">Detener Reloj</button>
+				<button class="section-1_btn startAlarm">Iniciar Alarma</button>
+				<button class="section-1_btn stopAlarm">Detener Alarma</button>
+			</div>
+		</section>
+		<section id="section-2" class="section" data-dark>
+			<h2 class="section-h2">Sección 2</h2>
+			<article class="area" data-dark>
+				<div class="ball"></div>
+			</article>
+		</section>
+		<section id="section-3" class="section" data-dark>
+			<h2 class="section-h2">Sección 3</h2>
+			<h3 class="section-h3">Reloj Digital y Alarma sonora</h3>
+			<div class="countDown">1212</div>
+		</section>
+		<section id="section-4" class="section" data-dark>
+			<h2 class="section-h2">Sección 4</h2>
+			<h3 class="section-h3">JavaScript Responsivo</h3>
+			<div id="youtube"></div>
+			<div id="gmaps"></div>
+		</section>
+		<section id="section-5" class="section" data-dark>
+			<h2 class="section-h2">Sección 5</h2>
+			<h3 class="section-h3">Responsive Tester</h3>
+			<form id="section5-form">
+				<div class="form-inputs">
+					<input type="url" name="url" id="url" placeholder="Url" required>
+					<input type="text" name="height" id="alto" placeholder="Alto" required>
+					<input type="text" name="width" id="ancho" placeholder="Ancho" required>
+					<div>
+						<input id="open-btn" type="submit" value="Abrir">
+						<input name="close" type="button" value="Cerrar">
+					</div>
+				</div>
+			</form>
+		</section>
+		<section id="section-6" class="section" data-dark>
+			<h2 class="section-h2">Sección 6</h2>
+			<h3 class="section-h3">User Agent</h3>
+			<div id="userInfo"></div>
+		</section>
+		<section id="section-7" class="section" data-dark>
+			<h2 class="section-h2">Sección 7</h2>
+		</section>
+		<section id="section-8" class="section" data-dark>
+			<h2 class="section-h2">Sección 8</h2>
+		</section>
+		<section id="section-9" class="section" data-dark>
+			<h2 class="section-h2">Sección 9</h2>
+		</section>
+		<section id="section-10" class="section" data-dark>
+			<h2 class="section-h2">Sección 10</h2>
+		</section>
+	</main>
+</body>
+<script type="module" src="app.js"></script>
+
+</html>

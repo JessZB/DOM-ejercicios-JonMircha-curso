@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --main-font: sans-serif;
+  --main-color: rgb(6, 160, 132);
+  --main-modal-color: rgba(6, 160, 132, 0.85);
+  --main-disabled-color: rgba(6, 160, 132, 0.5);
+  --second-color: rgb(24, 35, 36);
+  --second-modal-color: rgba(24, 35, 36, 0.85);
+  --third-color: rgb(255, 255, 255);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cabezera */
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #06a084;
+  color: var(--third-color);
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0px 7px 18px -2px rgba(0, 68, 89, 0.97);
+  -webkit-box-shadow: 0px 7px 18px -2px rgba(0, 68, 89, 0.97);
+  -moz-box-shadow: 0px 7px 18px -2px rgba(0, 68, 89, 0.97);
+}
+
+.header-h1 {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Secciones */
+
+section {
+  min-height: 100vh;
+  padding: 2rem;
+  margin: auto;
+  padding-top: 4rem;
+  max-width: 1200px;
+  text-align: center;
+  color: var(--second-color);
+}
+
+/* Panel */
+
+.panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-modal-color);
+  z-index: 900;
+  transform: translate(0, -100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.panel-open {
+  opacity: 1;
+  transform: translate(0, 0);
+  left: 0rem;
+  width: 100%;
+}
+
+/* Boton menú */
+.btn-panel {
+  position: fixed;
+  bottom: 1vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  gap: 1rem;
+  z-index: 1000;
+}
+.action-button {
+  border: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: #06a084;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+.action-button:hover {
+  background-color: var(--main-modal-color);
+}
+.action-button:active {
+  transform: scale(0.9);
+}
+.open_button-icon {
+  color: var(--third-color);
+  font-size: 2rem;
+}
+
+/* Mover hacia arriba */
+.up-button {
+  visibility: hidden;
+  opacity: 0;
+}
+.up-button.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modo Oscuro */
+
+/* Menú */
+
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu-a {
+  width: inherit;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--third-color);
+  transition: background-color 0.3s ease;
+}
+
+.menu-a:hover {
+  background-color: #06a084;
+}
+
+/* Section 1 */
+.btn-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.section-1_btn {
+  width: 150px;
+  gap: 1rem;
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--main-color);
+  font-size: 1rem;
+  color: var(--third-color);
+  transition: background-color 0.2s ease;
+}
+.section-1_btn:hover {
+  background-color: var(--main-modal-color);
+}
+.section-1_btn:disabled {
+  background-color: var(--main-disabled-color);
+}
+
+/* Section 2 */
+
+.area {
+  background-color: var(--second-color);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 400px;
+}
+
+.ball {
+  background-color: var(--main-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* Section 3 */
+
+.dark-mode{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+/* Section 5 */
+.form-inputs{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+}
+.form-inputs input{
+  border: none;
+  border-bottom: 2px solid var(--main-color);
+  border-radius: 5px;
+  outline: none;
+  padding: .5rem;
+  background-color: rgba(181, 226, 218, 0.809);
+  max-width: 350px;
+  transition: background-color .2s ease;
+}
+.form-inputs input:hover{
+  background-color: rgb(181, 226, 218);
+}
+
+.form-inputs input[type=submit], .form-inputs input[type=button]{
+  background-color: var(--main-color);
+  color: var(--third-color);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: .5rem;
+  width: 80px;
+  transition: background-color .2s ease;
+}
+.form-inputs input[type=submit]:hover, .form-inputs input[type=button]:hover{
+  background-color: rgba(7, 226, 186, 0.809);
+}
