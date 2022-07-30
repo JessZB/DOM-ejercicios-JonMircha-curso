@@ -7,6 +7,7 @@ import darkTheme from "./js/modo_oscuro.js";
 import responsiveMedia from "./js/javascript_responsivo.js";
 import responsiveTester from "./js/responsive_tester.js";
 import userAgent from "./js/deteccion_dispositivos.js";
+import isOnline from "./js/detectar_red.js";
 
 const d = document;
 
@@ -45,16 +46,5 @@ d.addEventListener("keydown", (e) => {
   // shortCuts(".area", ".item")
 });
 
-// Mi solución
-// const {hamburguerMenu, hiddenMenu} = funciones;
+isOnline('online-message', "online", "offline")
 
-// const $openButton = document.getElementById("open-button"),
-//       $menu = document.querySelector(".panel");
-
-// $openButton.addEventListener("click", ()=>{
-//     hamburguerMenu($menu, "panel-open")
-// })
-
-// window.addEventListener("scroll", ()=>{
-//     hiddenMenu($menu, "panel-open")
-// })

@@ -212,6 +212,12 @@ section {
   color: var(--main-color);
 }
 
+/* Section 4 */
+
+#section-4 a{
+  color: var(--main-color);
+}
+
 /* Section 5 */
 .form-inputs{
 display: flex;
@@ -245,4 +251,26 @@ gap: 10px;
 }
 .form-inputs input[type=submit]:hover, .form-inputs input[type=button]:hover{
   background-color: rgba(7, 226, 186, 0.809);
+}
+
+/* SECTION 7 */
+
+.online,.offline{
+  opacity: 1;
+  position: fixed;
+  bottom: 10vh;
+  left: 1vw;
+  font-size: 1.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  color: var(--third-color);
+  background-color: rgb(13, 162, 18);
+  transition: transform 0.5s ease, opacity 0.2s ease,
+  visibility 0.2s ease;
+  z-index: 300;
+}
+
+.offline{
+  z-index: 299;
+  background-color: rgb(255, 91, 91);
 }

@@ -1,7 +1,7 @@
 const d = document,
   n = navigator,
   ua = navigator.userAgent;
-console.log(n);
+  
 export default function userAgent(id) {
   const $id = d.getElementById(id),
     isMobile = {
