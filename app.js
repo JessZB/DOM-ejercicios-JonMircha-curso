@@ -8,6 +8,7 @@ import responsiveMedia from "./js/javascript_responsivo.js";
 import responsiveTester from "./js/responsive_tester.js";
 import userAgent from "./js/deteccion_dispositivos.js";
 import isOnline from "./js/detectar_red.js";
+import webCam from "./js/detectar_webcam.js";
 
 const d = document;
 
@@ -38,6 +39,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   );
   responsiveTester("section5-form");
   userAgent("userInfo")
+  webCam("webCam")
 });
 
 d.addEventListener("keydown", (e) => {

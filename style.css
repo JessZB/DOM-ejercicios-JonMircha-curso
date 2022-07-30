@@ -274,3 +274,17 @@ gap: 10px;
   z-index: 299;
   background-color: rgb(255, 91, 91);
 }
+
+/* Section 8 */
+#section-8{
+  display: flex;
+  flex-direction: column;
+}
+#webCam{
+  max-height: 200px;
+}
+#section-8 img{
+  width: auto;
+  max-height: 300px;
+  margin: auto;
+}
