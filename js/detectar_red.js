@@ -10,17 +10,26 @@ export default function networkStatus(){
     if(n.onLine){
       $div.textContent = "Conexión Reestablecida";
       $div.classList.add('online')
+      $div.classList.add('active')
       $div.classList.remove('offline')
+      setTimeout(()=>{
+        $div.classList.remove('active')
+      },3000)
     }else{
       $div.textContent = "Conexión Perdida";
       $div.classList.add('offline');
+      $div.classList.add('active')
       $div.classList.remove('online');
+      setTimeout(()=>{
+        $div.classList.remove('active')
+      },3000)
     }
 
     d.body.insertAdjacentElement('afterbegin', $div);
+    
     setTimeout(()=>{
       d.body.removeChild($div)
-    },2000)
+    },6000)
   }
   
       w.addEventListener("online", isOnline)

@@ -76,6 +76,7 @@ section {
   bottom: 0;
   height: 100%;
   display: flex;
+  overflow-y: auto;
   justify-content: center;
   align-items: center;
   background-color: var(--second-modal-color);
@@ -225,6 +226,7 @@ flex-direction: column;
 align-items: center;
 gap: 10px;
 }
+
 .form-inputs input{
   border: none;
   border-bottom: 2px solid var(--main-color);
@@ -256,17 +258,26 @@ gap: 10px;
 /* SECTION 7 */
 
 .online,.offline{
-  opacity: 1;
+  opacity: 0;
   position: fixed;
-  bottom: 10vh;
-  left: 1vw;
+  bottom: 20vh;
+  left: 2vw;
   font-size: 1.5rem;
-  padding: 1.5rem 1rem;
   border-radius: 5px;
-  color: var(--third-color);
-  background-color: rgb(13, 162, 18);
-  transition: transform 0.5s ease, opacity 0.2s ease,
+  padding: 1rem;
+  transform: translateY(200%);
+  transition:position .2s, transform 0.5s ease, opacity 0.2s ease,
   visibility 0.2s ease;
+  color: var(--third-color);
+}
+
+.active{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.online{
+  background-color: rgb(13, 162, 18);
   z-index: 300;
 }
 

@@ -9,6 +9,7 @@ import responsiveTester from "./js/responsive_tester.js";
 import userAgent from "./js/deteccion_dispositivos.js";
 import isOnline from "./js/detectar_red.js";
 import webCam from "./js/detectar_webcam.js";
+import getGeolocation from "./js/detectar_ubicacion.js";
 
 const d = document;
 
@@ -40,6 +41,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   responsiveTester("section5-form");
   userAgent("userInfo")
   webCam("webCam")
+  getGeolocation("ubication-info")
 });
 
 d.addEventListener("keydown", (e) => {
