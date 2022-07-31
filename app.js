@@ -10,6 +10,7 @@ import userAgent from "./js/deteccion_dispositivos.js";
 import isOnline from "./js/detectar_red.js";
 import webCam from "./js/detectar_webcam.js";
 import getGeolocation from "./js/detectar_ubicacion.js";
+import searchItem from "./js/filtrar_busqueda.js";
 
 const d = document;
 
@@ -42,6 +43,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   userAgent("userInfo")
   webCam("webCam")
   getGeolocation("ubication-info")
+  searchItem("card-search", ".card")
 });
 
 d.addEventListener("keydown", (e) => {

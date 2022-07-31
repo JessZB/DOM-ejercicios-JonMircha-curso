@@ -10,12 +10,10 @@ export default function getGeolocation(id) {
 
   // @param {GeolocationPosition} position
   const geoposOK = (pos) => {
-    console.log(pos);
     let lat = pos.coords.latitude,
       long = pos.coords.longitude,
       pres = pos.coords.accuracy;
 
-    console.log(lat, long);
     $geoInfo.insertAdjacentHTML(
       "beforeend",
       `
