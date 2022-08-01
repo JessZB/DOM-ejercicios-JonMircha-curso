@@ -321,3 +321,9 @@ figcaption{
   visibility: hidden;
   order:1;
 }
+
+/* Section 11  */
+
+ul{
+  list-style: none;
+}
