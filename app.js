@@ -12,6 +12,7 @@ import webCam from "./js/detectar_webcam.js";
 import getGeolocation from "./js/detectar_ubicacion.js";
 import searchItem from "./js/filtrar_busqueda.js";
 import whoWins from "./js/sorteo_digital.js";
+import responsiveSlider from "./js/responside_slider.js";
 
 const d = document;
 
@@ -46,6 +47,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   getGeolocation("ubication-info")
   searchItem("card-search", ".card")
   whoWins(".list-lottery" ,".checkList", ["JavaScript", "Java", "C", "Python", "Ruby", "Go","Visual Basic", "Rush", "Perl"])
+  responsiveSlider()
 });
 
 d.addEventListener("keydown", (e) => {
