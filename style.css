@@ -491,7 +491,6 @@ ul {
     "container aside";
   }
   main{
-    width: 80%;
     grid-area: "container";
   }
   .header{
