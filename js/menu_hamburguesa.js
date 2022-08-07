@@ -1,6 +1,7 @@
 const d = document;
 
 export default function hamburguerMenu(panelBtn, panel, activePanel) {
+  
   d.addEventListener("click", (e) => {
     if (e.target.matches(panelBtn) || e.target.matches(`${panelBtn} *`)) {
       d.querySelector(panel).classList.toggle(activePanel);
