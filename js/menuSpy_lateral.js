@@ -2,7 +2,6 @@ const d = document;
 
 export default function scrollSpy(sections, links) {
   let $section = d.querySelectorAll("section[data-scroll-spy");
-    console.log($section)
   const updateMenu = (entries, observe) => {
     entries.forEach((entry) => {
       let id = entry.target.getAttribute("id");

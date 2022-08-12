@@ -15,6 +15,8 @@ import whoWins from "./js/sorteo_digital.js";
 import responsiveSlider from "./js/responside_slider.js";
 import scrollSpy from "./js/menuSpy_lateral.js";
 import autoVideo from "./js/video_inteligente.js";
+import formValidation from "./js/validacion_formulario.js";
+import speechWindow from "./js/narrador.js";
 
 const d = document;
 
@@ -44,14 +46,15 @@ d.addEventListener("DOMContentLoaded", (e) => {
     referrerpolicy="no-referrer-when-downgrade"></iframe>`
   );
   responsiveTester("section5-form");
-  userAgent("userInfo")
-  webCam("webCam")
-  getGeolocation("ubication-info")
-  searchItem("card-search", ".card")
-  whoWins(".list-lottery" ,".checkList", ["JavaScript", "Java", "C", "Python", "Ruby", "Go","Visual Basic", "Rush", "Perl"])
-  responsiveSlider()
-  scrollSpy()
-  autoVideo()
+  userAgent("userInfo");
+  webCam("webCam");
+  getGeolocation("ubication-info");
+  searchItem("card-search", ".card");
+  whoWins(".list-lottery" ,".checkList", ["JavaScript", "Java", "C", "Python", "Ruby", "Go","Visual Basic", "Rush", "Perl"]);
+  responsiveSlider();
+  scrollSpy();
+  autoVideo();
+  formValidation("section14-form")
 });
 
 d.addEventListener("keydown", (e) => {
@@ -61,4 +64,5 @@ d.addEventListener("keydown", (e) => {
 });
 
 isOnline('online-message', "online", "offline")
+speechWindow(".speech-play", ".speech-pause", ".speech-stop", ".speech-text")
 

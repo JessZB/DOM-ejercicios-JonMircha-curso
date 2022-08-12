@@ -15,15 +15,15 @@
 	<header class="header">
 		<h1 class="header-h1">Ejercicios Prácticos</h1>
 	</header>
-			<button class="action-button dark-button">
-				<i class="btn-icon fa-solid fa-moon"></i>
-			</button>
-			<button class="action-button up-button">
-				<i class="btn-icon fa-solid fa-arrow-up"></i>
-			</button>
-			<button class="action-button open-button">
-				<i class="btn-icon fa-solid fa-bars"></i>
-			</button>
+	<button class="action-button dark-button">
+		<i class="btn-icon fa-solid fa-moon"></i>
+	</button>
+	<button class="action-button up-button">
+		<i class="btn-icon fa-solid fa-arrow-up"></i>
+	</button>
+	<button class="action-button open-button">
+		<i class="btn-icon fa-solid fa-bars"></i>
+	</button>
 	<aside class="panel">
 		<nav class="menu">
 			<a class="menu-a" href="#section-1" data-scroll-spy>Reloj Digital y Alarma</a>
@@ -39,6 +39,8 @@
 			<a class="menu-a" href="#section-11" data-scroll-spy>Sorteo Digital</a>
 			<a class="menu-a" href="#section-12" data-scroll-spy>Responsive Slider</a>
 			<a class="menu-a" href="#section-13" data-scroll-spy>Visibility Change (API)</a>
+			<a class="menu-a" href="#section-14" data-scroll-spy>Validación de Formulario</a>
+			<a class="menu-a" href="#section-15" data-scroll-spy>Narrador de Voz</a>
 		</nav>
 	</aside>
 	<main>
@@ -148,42 +150,42 @@
 			<div class="slider-container">
 
 				<img src="assets/icons/arrowL.svg" id="before" class="slider-control" alt="">
-				
+
 				<figure class="sliders-example slider-show">
 					<img src="assets/img/1.png" class="slider-img" alt="example">
 					<figcaption>Title</figcaption>
 				</figure>
 
 				<figure class="sliders slider-show">
-					<img src="assets/img/1.png" class="slider-img" alt="1" >
+					<img src="assets/img/1.png" class="slider-img" alt="1">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/2.png" class="slider-img" alt="2" >
+					<img src="assets/img/2.png" class="slider-img" alt="2">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/3.png" class="slider-img" alt="3" >
+					<img src="assets/img/3.png" class="slider-img" alt="3">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/4.png" class="slider-img" alt="4" >
+					<img src="assets/img/4.png" class="slider-img" alt="4">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/5.png" class="slider-img" alt="5" >
+					<img src="assets/img/5.png" class="slider-img" alt="5">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/6.png" class="slider-img" alt="6" >
+					<img src="assets/img/6.png" class="slider-img" alt="6">
 					<figcaption>Title</figcaption>
 				</figure>
 				<figure class="sliders">
-					<img src="assets/img/7.png" class="slider-img" alt="7" >
+					<img src="assets/img/7.png" class="slider-img" alt="7">
 					<figcaption>Title</figcaption>
 				</figure>
-				
-				
+
+
 				<img src="assets/icons/arrowR.svg" id="next" class="slider-control" alt="">
 			</div>
 
@@ -191,14 +193,64 @@
 		<section id="section-13" class="section" data-dark data-scroll-spy>
 			<h2 class="section-h2">Sección 13</h2>
 			<h3 class="section-h3">Visibility Change (API)</h3>
-			<video src="assets/video/video.mov" controls muted data-smart-video loop></video>
+			<video class="section13-video" src="assets/video/video.mov" controls muted data-smart-video loop></video>
 			</video>
 		</section>
 		<section id="section-14" class="section" data-dark data-scroll-spy>
 			<h2 class="section-h2">Sección 14</h2>
+			<h3 class="section-h3">Validación de Formulario</h3>
+
+			<form id="contact-form">
+				<legend class="contant-form-legend">Envia tus comentarios</legend>
+				<div id="group-name">
+					<input type="text" name="name" class="contact_form-input" id="" placeholder="Escriba su nombre..."
+						pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$" title="Nombre solo puede contener letras y espacios en blanco"
+						required>
+					<p class="form-error">Nombre solo puede contener letras y espacios en blanco</p>
+				</div>
+				<div id="group-number">
+					<input type="tel" name="number" class="contact_form-input" id="" placeholder="Teléfono..."
+						pattern="^\d{7,14}$" title="Introduzca un número de teléfono válido" required>
+					<p class="form-error">Introduzca un número de teléfono válido</p>
+				</div>
+				<div id="group-email">
+					<input type="email" name="email" class="contact_form-input" id="" placeholder="E-mail..."
+						pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" title="Introduzca un correo válido"
+						required>
+					<p class="form-error">Error de formulario</p>
+				</div>
+				<div id="group-comment">
+					<textarea name="comment" class="contact_form-input" placeholder="Añadir un comentario..." rows="10"
+						data-pattern="^[a-zA-ZÀ-ÿ\s]{1,250}$" title="No puede enviar un comentario vacío"
+						required></textarea>
+					<p class="form-error">Error de formulario</p>
+				</div>
+				<input class="contact_form-submit" type="submit" value="ENVIAR">
+
+				<div class="contact-form-load none">
+					<img src="assets/icons/loading.svg" alt="">
+				</div>
+				<div class="contact-form-response none">
+					<p>Los datos han sido enviados</p>
+				</div>
+
+			</form>
+
 		</section>
 		<section id="section-15" class="section" data-dark data-scroll-spy>
 			<h2 class="section-h2">Sección 15</h2>
+			<h3 class="section-h3">Narrador de Voz</h3>
+			<div class="speech-area">
+				<select id="speech-selector">
+					<option value="">---Elige una Opción---</option>
+				</select>
+				<textarea class="speech-text" placeholder="Introduzca Texto a Narrar" rows="10"></textarea>
+				<div class="speech-btn">
+					<button class="speech-play">Leer Texto</button>
+					<button class="speech-pause none">Pausa</button>
+					<button class="speech-stop">Parar</button>
+				</div>
+			</div>
 		</section>
 	</main>
 </body>

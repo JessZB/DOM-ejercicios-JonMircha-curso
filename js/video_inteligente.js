@@ -5,11 +5,9 @@ export default function autoVideo(media){
     const playMedia = (entries)=>{
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                console.log("viending")
                 entry.target.play()
             }
             else {
-                console.log("viendin'tg")
                 entry.target.pause()
             }
             window.addEventListener('visibilitychange', ()=>

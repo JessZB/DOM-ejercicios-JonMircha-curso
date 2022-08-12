@@ -156,7 +156,7 @@ section {
   font-size: 2rem;
 }
 
-.btn-img{
+.btn-img {
   width: inherit;
   height: inherit;
   color: white;
@@ -191,8 +191,6 @@ section {
   bottom: 2vh;
   left: 4vw;
 }
-
-
 
 /* Section 1 */
 .btn-section {
@@ -454,6 +452,128 @@ ul {
   opacity: 0.8;
 }
 
+/* Section 13 */
+
+.section13-video {
+  width: 100%;
+}
+
+/* Section 14 */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 3px;
+  width: 100%;
+  background-color: rgb(221, 221, 221);
+  margin: auto;
+  color: var(--second-color);
+}
+
+.contact_form-input {
+  padding: 0.8em;
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid transparent;
+  outline: none;
+  background-color: var(--third-color);
+  font-size: 1rem;
+}
+
+.contact_form-input::placeholder {
+  color: var(--second-color);
+}
+
+#contact-form textarea {
+  resize: none;
+  width: 100%;
+}
+
+.contact_form-submit {
+  cursor: pointer;
+  width: 50%;
+  margin: auto;
+  padding: 0.8rem;
+  font-weight: bold;
+}
+
+.contant-form-legend,
+.contact-form-response {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-form-load img{
+  height: 100px;
+}
+
+.none {
+  display: none;
+}
+/* Section 14 Validations */
+
+.contact_form-input.error {
+  border-bottom: 3px solid rgb(202, 73, 73);
+}
+
+.contact_form-input.check {
+  border-bottom: 3px solid rgb(88, 202, 73);
+}
+
+.form-error {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0.5rem;
+  margin-top: 10px;
+  background-color: rgb(202, 73, 73);
+  color: var(--third-color);
+}
+
+.form_error-visible {
+  display: block;
+  animation: show-message .3s 1 normal 0s ease both;
+}
+
+/* Section 15 */
+
+.speech-area{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 1rem;
+  margin: auto;
+}
+
+.speech-text{
+  resize: none;
+  padding: 1rem;
+}
+
+.speech-btn{
+  gap: 10px;
+  display: flex;
+}
+.speech-btn button{
+  width: 100%;
+  padding: .3rem;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1px;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    font-size: .8rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   /* Menú */
 
@@ -464,7 +584,7 @@ ul {
     justify-content: space-evenly;
     align-items: flex-start;
   }
-  
+
   .menu-a {
     width: inherit;
     display: block;
@@ -472,7 +592,7 @@ ul {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--third-color);
     transition: background-color 0.3s ease;
   }
@@ -480,20 +600,20 @@ ul {
   .menu-a:hover {
     background-color: #06a084;
   }
-  
+
   /* Panel */
-  body{
+  body {
     display: grid;
     grid-template-columns: 80% 20%;
     grid-template-rows: 4rem 1fr;
-    grid-template-areas: 
-    "header header"
-    "container aside";
+    grid-template-areas:
+      "header header"
+      "container aside";
   }
-  main{
+  main {
     grid-area: "container";
   }
-  .header{
+  .header {
     grid-area: "header";
     width: 100vw;
   }
@@ -514,10 +634,10 @@ ul {
     visibility: visible;
     opacity: 1;
   }
-  .open-button{
+  .open-button {
     display: none;
   }
-  .visible{
+  .visible {
     background-color: var(--main-color);
   }
   .up-button {
@@ -527,5 +647,20 @@ ul {
     left: calc(4vw + 4.25rem);
     visibility: hidden;
     opacity: 0;
+  }
+
+  /* Section 13 */
+
+  .section13-video {
+    width: 60%;
+  }
+
+  /* Section 14 Form Validatin*/
+
+  #contact-form {
+    width: 60%;
+  }
+  #contact-form button {
+    padding: 1rem;
   }
 }

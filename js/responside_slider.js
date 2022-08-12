@@ -58,4 +58,8 @@ export default function responsiveSlider() {
       }, 0);
     }
   });
+  // Auto Slider
+  setInterval(() => {
+    $next.click();
+  }, 5000);
 }
