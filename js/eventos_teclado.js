@@ -21,7 +21,7 @@ export function moveBall(e, ball, area) {
     $area = d.querySelector(area),
     limitBall = $ball.getBoundingClientRect(),
     limitArea = $area.getBoundingClientRect();
-
+if(e.altKey){
   switch (e.key) {
     case "ArrowLeft":
       if (limitBall.left > limitArea.left) {
@@ -48,9 +48,9 @@ export function moveBall(e, ball, area) {
       }
       break;
     }
+}
+  
   $ball.style.transform = `translate(${x * 10}px,${y * 10}px)`;
-
-  const move = (direction) => {};
 }
 
 // export function moveItem(e, area, item) {

@@ -259,11 +259,11 @@ section {
 .form-inputs input {
   border: none;
   border-bottom: 2px solid var(--main-color);
-  border-radius: 5px;
+  border-radius: 3px;
   outline: none;
-  padding: 0.5rem;
+  padding: 0.8rem;
   background-color: rgba(181, 226, 218, 0.809);
-  max-width: 350px;
+  width: 60%;
   transition: background-color 0.2s ease;
 }
 .form-inputs input:hover {
@@ -284,6 +284,11 @@ section {
 .form-inputs input[type="submit"]:hover,
 .form-inputs input[type="button"]:hover {
   background-color: rgba(7, 226, 186, 0.809);
+}
+
+.form-inputs input::placeholder{
+  color: var(--second-color);
+  font-size: 1rem;
 }
 
 /* SECTION 7 */
@@ -330,6 +335,11 @@ section {
   width: auto;
   max-height: 300px;
   margin: auto;
+}
+#section-8 mark{
+  font-size: 1rem;
+  padding: .8rem;
+  border-radius: 3px;
 }
 
 /* Section 10 */
@@ -552,13 +562,22 @@ ul {
   padding: 1rem;
 }
 
+#speech-selector{
+  padding: .5rem;
+}
+
 .speech-btn{
   gap: 10px;
   display: flex;
 }
 .speech-btn button{
   width: 100%;
-  padding: .3rem;
+  padding: .5rem;
+  transition: transform .1s ease;
+}
+
+.speech-btn button:active{
+  transform: scale(.95);
 }
 
 @keyframes show-message {

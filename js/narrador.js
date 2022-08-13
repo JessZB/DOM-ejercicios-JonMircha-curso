@@ -13,7 +13,6 @@ export default function speechWindow(play, pause, stop, text) {
   d.addEventListener("DOMContentLoaded", (e) => {
     w.speechSynthesis.addEventListener("voiceschanged", () => {
       voices = w.speechSynthesis.getVoices();
-      console.log(voices);
       voices.forEach((voice) => {
         const $option = d.createElement("option");
         $option.value = voice.name;
@@ -23,7 +22,6 @@ export default function speechWindow(play, pause, stop, text) {
     });
     d.addEventListener("change", (e) => {
       if (e.target === $speechSelect) {
-        console.log(e.target.value);
         uterance.voice = voices.find((x) => x.name === e.target.value);
       }
     });

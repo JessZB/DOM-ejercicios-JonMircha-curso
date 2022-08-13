@@ -11,7 +11,6 @@ export default function responsiveSlider() {
     i = 0;
 
   $next.addEventListener("click", () => {
-    console.log(i);
     if (i < $content.length - 1) {
       i += 1;
     } else {
